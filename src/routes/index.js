@@ -5,7 +5,7 @@ import AppRoutes from "./app.routes";
 // import { Container } from './styles';
 
 const Routes = () => {
-  return <AppRoutes />;
+  return <AuthRoutes />;
 };
 
 export default Routes;
