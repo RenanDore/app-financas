@@ -2,17 +2,17 @@ import "react-native-gesture-handler";
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import firebase from "./src/services/firebaseConnection";
+import AuthProvider from "./src/contexts/auth";
 
 import Routes from "./src/routes";
-// import { Container } from './styles';
 
 const App = () => {
   return (
     <NavigationContainer>
-      <StatusBar style="auto" />
-      <Routes />
+      <AuthProvider>
+        <StatusBar style="auto" />
+        <Routes />
+      </AuthProvider>
     </NavigationContainer>
   );
 };
